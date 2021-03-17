@@ -18,7 +18,7 @@ require('dotenv/config');
 //        console.log('connected')
 //    });
 
-mongoose.connect("mongodb://localhost/ImagesInMongo", { useNewUrlParser: true , useUnifiedTopology: true })
+mongoose.connect("mongodb://localhost:27017/ImagesInMongo", { useNewUrlParser: true , useUnifiedTopology: true })
 .then(() => console.log("Connection Successfull...."))
 .catch((err) => console.log(err)) ;
 
