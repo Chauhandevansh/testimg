@@ -18,9 +18,9 @@ require('dotenv/config');
 //        console.log('connected')
 //    });
 
-mongoose.connect("mongodb://localhost:27017/ImagesInMongo", { useNewUrlParser: true , useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://devansh01:devdev30@cluster0.rrnxk.mongodb.net/shared-roof?retryWrites=true&w=majority", { useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex:true, useFindAndModify:false })
 .then(() => console.log("Connection Successfull...."))
-.catch((err) => console.log(err)) ;
+.catch((err) => console.log("database connection unsuccessfull")) ;
 
 // Step 4 - set up EJS
  
@@ -92,7 +92,7 @@ app.post('/', upload.single('image'), (req, res, next) => {
 
 // Step 9 - configure the server's port
  
-var port = process.env.PORT || '3000'
+var port = process.env.PORT || '5000'
 app.listen(port, err => {
     if (err)
         throw err
